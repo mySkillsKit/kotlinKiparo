@@ -1,0 +1,1 @@
+/Users/avas/IdeaProjects/KotlinKiparo/build/classes/kotlin/main/MainKt.class
