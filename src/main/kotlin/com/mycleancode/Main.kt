@@ -65,6 +65,55 @@ fun main(args: Array<String>) {
     val intArrayOf = intArrayOf(4, 57, 8)
     val arrayOfString = arrayOf("home", "flat", "house")
 
+    // for and while
+    //for i = 0..10 = 11 times
+    for (i in 0..10) {
+        println("i = $i")
+    }
+    //for i = 0..9 = 10 times
+    for (i in 0 until 10) {
+        println("i = $i")
+    }
+
+    //for i = 0, 3, 6, 9 = 4 times
+    for (i in 0 until 10 step 3) {
+        println("i = $i")
+    }
+
+    //for i = 10, 5, 0 = 3 times
+    for (i in 10 downTo 0 step 5) {
+        println("i = $i")
+    }
+    //for variant #1
+    for (i in 0 until arrayOfString.size) {
+        println("i = $i, value = ${arrayOfString[i]}")
+    }
+    //for variant #2
+    for (value in arrayOfString) {
+        println("value = $value")
+    }
+    //for variant #3
+    for (index in arrayOfString.indices) {
+        println("i = $index, value = ${arrayOfString[index]}")
+    }
+    //for variant #3
+    for ((i, value) in arrayOfString.withIndex()) {
+        println("i = $i, value = $value")
+    }
+
+    mainLoop@ for ((i, value) in arrayInt.withIndex()) {
+        println("i = $i, value = $value")
+        for (v in arrayOfString) {
+            println("valueStr = $v")
+            break@mainLoop
+        }
+    }
+
+    var x: Int = 0
+    while (x < 5) {
+        println("x = $x")
+        x++
+    }
 
 }
 
