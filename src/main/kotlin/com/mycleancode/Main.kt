@@ -115,6 +115,57 @@ fun main(args: Array<String>) {
         x++
     }
 
+    //Collection
+    val arrayList = ArrayList<String>()
+
+    val list = listOf("111", "222", "333")
+    val textStr = list.get(0)
+    val textStr1 = list[0]
+    println("text = $textStr")
+    for (element in list) {
+        println("for 1 element $element")
+    }
+
+    val mutableListOf = mutableListOf("111", "222", "333")
+    mutableListOf.add("444")
+    for (element in mutableListOf) {
+        println("for 2 element $element")
+    }
+
+    val students = mutableListOf(
+        Student(name = "Anat", age = 19),
+        Student(name = "Petr", age = 22),
+        Student(name = "Ivan", age = 21),
+        Student(name = "Serg", age = 17)
+    )
+
+    for (student in students) {
+        println("student: ${student.name}")
+    }
+
+    students.forEach {
+        println("student: ${it.name}")
+    }
+
+    val mapOf = mutableMapOf(
+        "Anat" to Student("Anat", 19),
+        "Petr" to Student("Petr", 22),
+        "Ivan" to Student("Ivan", 21),
+        "Serg" to Student("Serg", 17)
+    )
+
+    mapOf.forEach { student ->
+        println("key = ${student.key}, value = ${student.value.age}")
+    }
+
+    val name = mapOf["Anat"]
+    println(name)
+
+    val stringSet = setOf("234", "6642", "9695948")
+    stringSet.forEach {
+        println("element set - ${it}")
+    }
+
 }
 
 fun calc(a: Int, b: Int): Int {
