@@ -2,6 +2,7 @@ HELP.md
 build/
 .idea
 .gradle
+gradle
 
 target/
 .mvn/wrapper/

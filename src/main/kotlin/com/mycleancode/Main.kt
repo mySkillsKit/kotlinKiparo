@@ -52,7 +52,18 @@ fun main(args: Array<String>) {
     }
 
     //array
+    val arrayInt: Array<Int> = Array<Int>(3) { 150; 200; 300 }
+    val arrayInt2 = Array<Int>(3) { 150; 200; 300 }
+    val arrayInt3 = Array(3) { 150; 200; 300 }
+    // arrayInt[0] = 0
+    // array from 5, 5 , 5, ...1000ps
+    val arrayInt4 = Array(1000) { 5 }
+    val arrayInt5 = arrayOf(150, 300, 100)
+    val arrayOfNulls = arrayOfNulls<Int>(3)
 
+    val intArray = IntArray(3) { 1;45;6 }
+    val intArrayOf = intArrayOf(4, 57, 8)
+    val arrayOfString = arrayOf("home", "flat", "house")
 
 
 }
